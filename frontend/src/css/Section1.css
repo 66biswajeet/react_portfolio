@@ -1,0 +1,181 @@
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+/* --------------typing animation section--------------------- */
+.section1 .hero-text ul li {
+  font-size: 2rem;
+  position: relative;
+  animation: slide 12s steps(1) infinite;
+}
+
+@keyframes slide {
+  25% {
+    top: -70px;
+  }
+
+  50% {
+    top: -140px;
+  }
+
+  75% {
+    top: -210px;
+  }
+
+  100% {
+    top: -280px;
+  }
+}
+
+.section1 .hero-text ul {
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  font-size: 4rem;
+  width: 100%;
+}
+.section1 .hero-text ul li {
+  font-size: 4rem;
+}
+
+.section1 .hero-text ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-left: 5px solid #372cb7;
+  background: white;
+  left: 0;
+  animation: typing 3s steps(12) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+/* ============================MAIN=============================== */
+.section1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 5% 0;
+  column-gap: 200px;
+  background-image: url("../assets/bg3.gif");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 0 2% 0;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  background-size: contain;
+  position: relative;
+  background: transparent;
+}
+
+.herodec {
+  font-size: 6rem;
+  color: #000;
+}
+
+.name {
+  /* color: #e69a02; */
+  color: #7452cc;
+}
+
+.hero-text .know {
+  width: 20rem;
+  border: none;
+  /* background-color: #ebae35; */
+  /* background: #7452cc; */
+  background: black;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 13px 5px;
+  margin: 1rem 0rem 0 0;
+  text-align: center;
+  transition: all 0.5s;
+  box-shadow: rgba(116, 82, 204, 0.4) -5px 5px,
+    rgba(116, 82, 204, 0.3) -10px 10px, rgba(116, 82, 204, 0.2) -15px 15px,
+    rgba(116, 82, 204, 0.1) -20px 20px, rgba(116, 82, 204, 0.05) -25px 25px;
+}
+
+.hero-text .know:hover {
+  background: #6647b3;
+}
+
+.know a {
+  color: white;
+  font-size: 2rem;
+}
+
+.know i {
+  color: whitesmoke;
+  font-size: 20px;
+  padding-left: 2.5px;
+}
+
+.logo {
+  width: 450px;
+  padding: 0 0 0 10rem;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* ..........................................................media section */
+
+@media (max-width: 1150px) {
+  main {
+    margin-top: 5rem;
+  }
+
+  .section1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .section1 {
+    margin: 40% auto;
+  }
+
+  .section1 .logo {
+    width: 40rem;
+    margin-left: -10rem;
+  }
+
+  .section1.hero-text {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 450px) {
+  .section1 {
+    margin: 30% auto;
+  }
+  .section1.hero-text {
+    margin-left: 50px;
+    padding: 0 0rem 0 0;
+  }
+  .section1 .hero-text ul li {
+    font-size: 5rem;
+  }
+}
