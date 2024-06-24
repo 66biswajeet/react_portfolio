@@ -11,7 +11,7 @@ const Recof = (val) => {
       {/* <h3 className="hover">Hover</h3> */}
       <button className="title ">
         {val.txt}
-        <h6 className="title_text">{val.des}</h6>
+        <span className="title_text">{val.des}</span>
       </button>
 
       <a className="btn" href={val.href} target="_blank">
