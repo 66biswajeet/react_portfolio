@@ -101,6 +101,13 @@
   background-color: black;
   cursor: pointer;
   position: absolute;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+}
+.b {
+  margin-left: 26px;
 }
 .btn2 {
   display: none;
@@ -123,6 +130,7 @@ h5 {
 .cards .card:hover {
   transform: scale(1.1, 1.1);
 }
+
 /* .cards:hover > */
 .cards:hover > .card:not(:hover) {
   filter: blur(10px);
@@ -165,11 +173,6 @@ h5 {
   cursor: pointer;
   position: absolute;
   text-align: center;
-}
-
-a {
-  color: aliceblue;
-  font-weight: bold;
 }
 
 @media (max-width: 550px) {

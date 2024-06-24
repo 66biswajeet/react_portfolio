@@ -1,0 +1,31 @@
+.btn_box {
+  column-gap: 10px;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  margin: 0 0 40px 0;
+}
+
+.btn3 {
+  width: 80px;
+  height: 50px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  /* position: absolute; */
+
+  &:hover {
+    background-color: #521a8f;
+  }
+  &:active {
+    background-color: #521a8f;
+  }
+}
+
+.pro {
+  color: #6d23cf;
+}

@@ -10,20 +10,31 @@ const Recof = (val) => {
       <img className="img" src={val.img} alt="" />
       {/* <h3 className="hover">Hover</h3> */}
       <button className="title ">{val.txt}</button>
-      <button className="btn">
-        <a href="https://wca-jeetcode.streamlit.app" target="_blank">
+
+      <a className="btn" href={val.href} target="_blank">
+        <button href={val.href} className="btn b">
           VIEW
-        </a>
-      </button>
+        </button>
+      </a>
+
       <FaGithub className="btn2" />
     </div>
   );
 };
 
-let Cards = ({ Apidata }) => {
+let Cards = ({ Apidata, filterById }) => {
+  const getFilteredData = () => {
+    if (filterById === "ALL") {
+      return Apidata;
+    } else {
+      return Apidata.filter((item) => item.type === filterById);
+    }
+  };
+
+  const filteredData = getFilteredData();
   return (
     <div className="Div cards" id="projects">
-      {Apidata.map(Recof)}
+      {filteredData.map(Recof)}
     </div>
   );
 };
