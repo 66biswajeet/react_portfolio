@@ -9,7 +9,10 @@ const Recof = (val) => {
     <div className="card">
       <img className="img" src={val.img} alt="" />
       {/* <h3 className="hover">Hover</h3> */}
-      <button className="title ">{val.txt}</button>
+      <button className="title ">
+        {val.txt}
+        <h6 className="title_text">{val.des}</h6>
+      </button>
 
       <a className="btn" href={val.href} target="_blank">
         <button href={val.href} className="btn b">
