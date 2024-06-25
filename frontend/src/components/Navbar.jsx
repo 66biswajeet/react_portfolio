@@ -46,7 +46,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="navbar-link" href="">
+            <a className="navbar-link" href="#hireme">
               Hire Me
             </a>
           </li>

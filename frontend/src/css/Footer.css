@@ -1,0 +1,96 @@
+.main {
+  background-color: #000000;
+  position: relative;
+  padding-bottom: 15vh;
+  bottom: 0;
+}
+
+.div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  height: 60%;
+  padding-bottom: 5vh;
+  position: relative;
+}
+
+@media (max-width: 860px) {
+  .div {
+    row-gap: 0px;
+  }
+}
+
+.div1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  padding: 40px 10px;
+  /* max-width: 350px; */
+}
+
+.div1::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 107%;
+  background-color: white;
+  position: relative;
+  bottom: -150%;
+}
+
+@media (max-width: 1260px) {
+  .div1::before {
+    display: none;
+  }
+}
+
+.link {
+  font-size: 18px;
+  font-weight: 200;
+  padding: 10px 0;
+  color: #dedede;
+}
+
+.span {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px 0;
+  color: white;
+}
+
+.span::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  bottom: -40px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon .icon {
+  font-size: 30px;
+  margin: 0 10px;
+  color: white;
+}
+
+.icon .icon:hover {
+  color: #d1cdcd;
+}
+
+.h4 {
+  position: absolute;
+  bottom: 2px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 15px;
+}

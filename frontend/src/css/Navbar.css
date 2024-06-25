@@ -51,7 +51,7 @@ nav {
   z-index: 100;
   transition: top 0.3s;
   top: -1px;
-  /* padding: 0 0 20px 0; */
+  padding: 20px 0 20px 0;
 }
 
 .brand {
@@ -62,7 +62,7 @@ nav {
 }
 
 .brand a {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Bebas Neue", cursive;
   font-family: "Black Ops One", cursive;
   font-family: "Lato", sans-serif;
@@ -81,7 +81,7 @@ nav {
 }
 
 .brand p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1rem;
   font-family: "Bebas Neue", cursive;
