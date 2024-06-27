@@ -5,6 +5,7 @@ const NavbarLazy = lazy(() => import("./components/Navbar"));
 const Section1Lazy = lazy(() => import("./components/Section1"));
 const Section2Lazy = lazy(() => import("./components/Section2"));
 const TimelineLazy = lazy(() => import("./components/Timeline"));
+
 const Footer = lazy(() => import("./components/Footer"));
 
 import Preloader from "./preloader/Preloader";
@@ -40,6 +41,11 @@ function App() {
             {" "}
             {/* Fallback for Section2 */}
             <Section2Lazy />
+          </Suspense>
+          <Suspense fallback={<div>Loading Section 2...</div>}>
+            {" "}
+            {/* Fallback for Section2 */}
+            <TimelineLazy />
           </Suspense>
 
           <Suspense fallback={<div>Loading Timeline...</div>}>

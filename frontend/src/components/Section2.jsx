@@ -21,11 +21,7 @@ let Section2 = () => {
         <button className="btn3" onClick={() => handleButtonClick("WEB")}>
           WEB
         </button>
-        <button
-          className="btn3"
-          id="ml"
-          onClick={() => handleButtonClick("ML")}
-        >
+        <button className="btn3" onClick={() => handleButtonClick("ML")}>
           ML
         </button>
 

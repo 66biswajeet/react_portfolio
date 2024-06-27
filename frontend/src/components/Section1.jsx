@@ -9,16 +9,11 @@ const Section1 = () => {
   return (
     <>
       <div className="section1" id="section1">
-        <div
-          className="hero-text"
-          //   data-aos="fade-right"
-          //   data-aos-duration="1000"
-          //   data-aos-easing="linear"
-        >
+        <div className="hero-text">
           <h1>
             <p className="herodec">Hi,</p>
             <p className="herodec">
-              I am <span className="name">JEET</span>
+              I am <span className="name">BISWAJEET</span>
             </p>
             {/* <ul>
               <li>
@@ -37,11 +32,18 @@ const Section1 = () => {
             <Typo />
           </h1>
 
-          <div className="know">
-            <a href={pdf} target="_blank">
-              <span>Download CV</span>
-              <FaDownload />
-            </a>
+          <div className="btncls">
+            <div className="know">
+              <a href={pdf} target="_blank">
+                <span>MY RESUME </span>
+                <FaDownload />
+              </a>
+            </div>
+            <div className="know">
+              <a href="#hireme">
+                <span>HIRE ME</span>
+              </a>
+            </div>
           </div>
         </div>
         <img

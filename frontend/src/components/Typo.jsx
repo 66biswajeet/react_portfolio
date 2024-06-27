@@ -6,7 +6,7 @@ const Typo = () => {
       sequence={[
         "Ai Engineer", // Types 'One'
         1000, // Waits 1s
-        "DataScientist", // Deletes 'One' and types 'Two'
+        "Data Scientist", // Deletes 'One' and types 'Two'
         2000, // Waits 2s
 
         () => {

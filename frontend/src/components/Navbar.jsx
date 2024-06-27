@@ -36,7 +36,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="navbar-link" href="#achievement">
+            <a className="navbar-link" href="#skills">
               Skills
             </a>
           </li>
