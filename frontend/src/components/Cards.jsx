@@ -4,7 +4,6 @@ import "../css/Cards.css";
 import { FaGithub } from "react-icons/fa";
 
 const Recof = (val) => {
-  console.log(val.img);
   return (
     <div className="card">
       <img className="img" src={val.img} alt="" />

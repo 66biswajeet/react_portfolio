@@ -1,0 +1,54 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.message-panel {
+  background-color: #222;
+  color: #ddd;
+  padding: 50px 20px;
+  margin: 100px 0;
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 10px;
+  position: absolute;
+  top: 100px;
+  left: 10%;
+}
+
+.message-panel h1,
+.message-panel p,
+.message-panel li {
+  margin: 10px 0;
+  font-size: larger;
+}
+
+.message-panel strong {
+  font-weight: bold;
+}
+
+.message-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.message-panel li {
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.message-panel button {
+  background-color: #444;
+  color: #ddd;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.message-panel button:hover {
+  background-color: #666;
+}

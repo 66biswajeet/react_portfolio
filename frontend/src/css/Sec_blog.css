@@ -1,0 +1,11 @@
+.sec_blog_div1 {
+  display: grid;
+  grid-template-columns: auto 0.5fr;
+  grid-gap: 5px;
+}
+@media (max-width: 1000px) {
+  .sec_blog_div1 {
+    grid-template-columns: 1fr; /* Single-column layout on smaller screens */
+    grid-template-rows: auto; /* Rows defined to stack elements vertically */
+  }
+}

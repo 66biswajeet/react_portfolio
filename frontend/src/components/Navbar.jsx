@@ -3,6 +3,7 @@ import "../css/Navbar.css";
 import "../App.css";
 import { FiAlignJustify } from "react-icons/fi";
 import { IoMdCloseCircle } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,22 +27,22 @@ const Navbar = () => {
         </div>
         <ul className="navbar-list" onClick={toggleMobileMenu}>
           <li>
-            <a className="navbar-link" href="#section1">
+            <a className="navbar-link" href="/">
               Home
             </a>
           </li>
           <li>
-            <a className="navbar-link" href="#projects">
+            <a className="navbar-link" href="/#projects">
               Projects
             </a>
           </li>
           <li>
-            <a className="navbar-link" href="#skills">
+            <a className="navbar-link" href="/#skills">
               Skills
             </a>
           </li>
           <li>
-            <a className="navbar-link" href="#blog">
+            <a className="navbar-link" href="/#blog">
               Blog
             </a>
           </li>

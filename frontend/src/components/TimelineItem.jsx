@@ -8,7 +8,6 @@ import "../css/TimelineItem.css";
 import React from "react";
 
 const TimelineElement = (val) => {
-  console.log(val.background);
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"

@@ -18,11 +18,11 @@ const Footer = () => {
           <span className="span">WHO AM I ?</span>
           <h3>
             Hi i am Biswajeet Jena || AI-Aspiring Data Scientist | Highly
-            motivated CS student with a passion for AI and building data-driven
-            solutions. Skilled in Data Analysis , NLP Machine Learning, Deep
-            Learning concepts and frameworks , web development (MERN stack).
-            Seeking a Data Scientist role to leverage expertise and contribute
-            to impactful projects.
+            motivated Computer Science student with a passion for AI and
+            building data-driven solutions. Skilled in Data Analysis , NLP
+            Machine Learning, Deep Learning concepts and frameworks , web
+            development (MERN stack). Seeking a Data Scientist role to leverage
+            expertise and contribute to impactful projects.
           </h3>
         </div>
         <div className="div1">
@@ -31,8 +31,9 @@ const Footer = () => {
             href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJfsdbhGwCnXgRdQGfCRLXqLwCfQnpstlSZnWQtdKfppgxcRrrhRfJGhbSBHsKsXhDFHRBV"
             className="link"
           >
-            Email id : biswajeetjena2003@gmail.com
+            biswajeetjena2003@gmail.com
           </a>
+          <a className="link"> +91 8144564990</a>
           <a href="https://github.com/66biswajeet" className="link">
             Github
           </a>

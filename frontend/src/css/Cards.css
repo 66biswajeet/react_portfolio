@@ -206,14 +206,6 @@ h2 {
   color: #000;
 }
 
-h2::before {
-  position: absolute;
-  content: "";
-  width: 15%;
-  height: 2px;
-  background-color: #7452cc;
-}
-
 .container {
   margin: 0 10%;
 }

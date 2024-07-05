@@ -1,0 +1,43 @@
+.blog-post-container {
+  margin: 0px 5px;
+  position: relative;
+}
+
+.blog-post {
+  margin: 25px auto;
+  max-width: 800px;
+  padding: 20px;
+  color: black;
+}
+
+.blog-post .title_post {
+  margin-bottom: 15px;
+  color: black;
+  font-size: 6rem;
+  z-index: 2;
+  color: black;
+}
+
+.blog-post p.summary {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.blog-post .content {
+}
+
+.img_div {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.main_img {
+  z-index: -1;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+}

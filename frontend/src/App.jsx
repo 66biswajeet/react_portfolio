@@ -1,61 +1,42 @@
-import React, { useState, Suspense, lazy, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import "./App.css";
-
-const NavbarLazy = lazy(() => import("./components/Navbar"));
-const Section1Lazy = lazy(() => import("./components/Section1"));
-const Section2Lazy = lazy(() => import("./components/Section2"));
-const TimelineLazy = lazy(() => import("./components/Timeline"));
-
-const Footer = lazy(() => import("./components/Footer"));
-
 import Preloader from "./preloader/Preloader";
 
+import { Route, Routes } from "react-router-dom";
+
+// Lazy-loaded components
+const Navbar = lazy(() => import("./components/Navbar"));
+const Section1 = lazy(() => import("./components/Section1"));
+const Section2 = lazy(() => import("./components/Section2"));
+const Timeline = lazy(() => import("./components/Timeline"));
+const Section4 = lazy(() => import("./components/Section4"));
+const Footer = lazy(() => import("./components/Footer"));
+
 function App() {
-  const [screenLoading, setScreenLoading] = useState(false);
+  const [screenLoading, setScreenLoading] = useState(true);
 
   useEffect(() => {
-    setScreenLoading(true);
     setTimeout(() => {
       setScreenLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (
-    <>
-      {screenLoading ? (
-        <Preloader />
-      ) : (
-        <>
-          <Suspense fallback={<div>Loading Navbar...</div>}>
-            {" "}
-            {/* Fallback for Section2 */}
-            <NavbarLazy />
-          </Suspense>
-          <Suspense fallback={<div>Loading Section 1...</div>}>
-            {" "}
-            {/* Fallback for Section2 */}
-            <Section1Lazy />
-          </Suspense>
+    <Suspense fallback={<Preloader />}>
+      {!screenLoading && (
+        <div className="App">
+          <Navbar />
 
-          <Suspense fallback={<div>Loading Section 2...</div>}>
-            {" "}
-            {/* Fallback for Section2 */}
-            <Section2Lazy />
-          </Suspense>
-          <Suspense fallback={<div>Loading Section 2...</div>}>
-            {" "}
-            {/* Fallback for Section2 */}
-            <TimelineLazy />
-          </Suspense>
+          <Section1 />
+          <Section2 />
+          <Timeline />
 
-          <Suspense fallback={<div>Loading Timeline...</div>}>
-            {" "}
-            {/* Fallback for Timeline */}
-            <Footer />
-          </Suspense>
-        </>
+          <Section4 />
+
+          <Footer />
+        </div>
       )}
-    </>
+    </Suspense>
   );
 }
 

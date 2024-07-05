@@ -1,15 +1,19 @@
-import React, { useState } from "react";
-import Cards from "./Cards";
+import React, { useState, Suspense, lazy, useEffect } from "react";
+
 import Card_api from "../Api/Card_api";
 import "../css/Cards.css";
 import "../css/Section2.css";
+import "../css/Button.css";
+
+const CardLazy = lazy(() => import("./Cards"));
+import Preloader from "../preloader/Preloader";
 
 let Section2 = () => {
-  const [selectedButtonId, setSelectedButtonId] = useState("ML"); // State for button ID
+  const [selectedButtonId, setSelectedButtonId] = useState("ML");
 
   const handleButtonClick = (buttonId) => {
-    setSelectedButtonId(buttonId); // Update state with clicked button ID
-    console.log(`${buttonId}`); // Log the ID
+    setSelectedButtonId(buttonId);
+    console.log(buttonId);
   };
 
   return (
@@ -29,7 +33,10 @@ let Section2 = () => {
           ALL
         </button>
       </div>
-      <Cards Apidata={Card_api} filterById={selectedButtonId} />
+
+      <Suspense fallback={<Preloader />}>
+        <CardLazy Apidata={Card_api} filterById={selectedButtonId} />
+      </Suspense>
     </div>
   );
 };

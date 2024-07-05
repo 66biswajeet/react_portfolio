@@ -141,6 +141,17 @@ nav ul li a:active::after {
   top: 30px;
 }
 
+.admin {
+  background-color: black;
+  color: white;
+  padding: 5px 5px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: gray;
+  }
+}
+
 /* ..........................................................media section */
 
 @media (max-width: 1150px) {
