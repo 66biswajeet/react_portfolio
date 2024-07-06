@@ -14,12 +14,15 @@ form {
   height: 50px;
   background-color: white;
   color: black;
+  border-radius: 5px;
+  padding: 0 5px;
 }
 
 button {
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #010101;
   color: white;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
 }
@@ -35,5 +38,10 @@ h2 {
 
 .jodit {
   color: black;
-  border: 2px solid black;
+
+  border-radius: 10px;
+  padding: 10px;
+}
+.jodit-workplace {
+  min-height: 20px;
 }

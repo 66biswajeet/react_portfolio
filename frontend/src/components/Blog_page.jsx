@@ -65,7 +65,7 @@ const Blog_page = () => {
                 <h1 className="title_post">{newposts[0].title}</h1>
                 <img
                   className="main_img"
-                  src="https://tse4.mm.bing.net/th?id=OIG4.8mVgJpXD0D.9OcF9Ymj0&pid=ImgGn"
+                  src={newposts[0].img}
                   alt="post img"
                 />
               </div>

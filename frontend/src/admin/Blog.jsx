@@ -73,6 +73,8 @@ const Blog = () => {
           <div>
             <input
               type="text"
+              className="input"
+              placeholder="Enter Image link"
               value={img}
               onChange={(e) => setImg(e.target.value)}
             />
@@ -106,7 +108,7 @@ const Blog = () => {
         <div className="root">
           {posts.map((post) => (
             <div className="article_card" key={post._id}>
-              <div className="article_card-header"></div>
+              <img className="article_card-header" src={post.img} />
               <div className="article_card-content">
                 <h5 className="article_card-title">{post.title}</h5>
                 <p className="article_card-description">{post.text}</p>
