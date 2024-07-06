@@ -43,14 +43,14 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <Link className="navbar-link" to="/admin/blog" target="_blank">
+            <Link className="navbar-link" to="/admin/blog">
               Blog
             </Link>
           </li>
           <li>
-            <a className="navbar-link" href="/admin/contact">
+            <Link className="navbar-link" to="/admin/contact">
               Messages
-            </a>
+            </Link>
           </li>
         </ul>
 

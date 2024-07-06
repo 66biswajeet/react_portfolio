@@ -1,12 +1,15 @@
 import React from "react";
 import "../css/Cards.css";
-
+import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Recof = (val) => {
   return (
     <div className="card">
       <img className="img" src={val.img} alt="" />
+
       {/* <h3 className="hover">Hover</h3> */}
       <button className="title ">
         {val.txt}
@@ -34,6 +37,7 @@ let Cards = ({ Apidata, filterById }) => {
   };
 
   const filteredData = getFilteredData();
+
   return (
     <div className="Div cards" id="projects">
       {filteredData.map(Recof)}

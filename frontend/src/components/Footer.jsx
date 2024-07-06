@@ -9,6 +9,7 @@ import {
 import { RiTwitterXFill } from "react-icons/ri";
 import "../css/Footer.css"; // Import the CSS file
 import ContactForm from "./ContactForm";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -70,7 +71,12 @@ const Footer = () => {
           <RiTwitterXFill className="icon" />
         </a>
       </div>
-      <div className="h4">Portfolio Website | © 2024 Biswajeet Jena </div>
+      <div className="h4">
+        Portfolio Website | © 2024 Biswajeet Jena |
+        <Link className="navbar-link" to="/admin/blog">
+          JEET CODE
+        </Link>
+      </div>
     </div>
   );
 };

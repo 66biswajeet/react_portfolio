@@ -21,7 +21,7 @@ const ContactForm = () => {
     try {
       const newContact = { name, email, subject, message };
       const response = await axios.post(
-        "http://localhost:5000/api/auth/contact",
+        "https://biswajeetbackend.onrender.com/api/auth/contact",
         newContact
       );
       setName("");

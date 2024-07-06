@@ -12,11 +12,14 @@ const Blog = () => {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [content, setContent] = useState("");
+  const [img, setImg] = useState("");
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/auth/card");
+        const response = await axios.get(
+          "https://biswajeetbackend.onrender.com/api/auth/card"
+        );
         setPosts(
           response.data.map((post) => ({
             ...post,
@@ -33,17 +36,18 @@ const Blog = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const newPost = { title, text, content };
+    const newPost = { title, text, content, img };
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/card",
+        "https://biswajeetbackend.onrender.com/api/auth/card",
         newPost
       );
       setPosts((prevPosts) => [...prevPosts, response.data]);
       setTitle("");
       setText("");
       setContent("");
+      setImg("");
     } catch (error) {
       console.error("There was an error creating the post!", error);
     }
@@ -51,7 +55,9 @@ const Blog = () => {
 
   const handleDeletePost = async (postId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/auth/card/${postId}`);
+      await axios.delete(
+        `https://biswajeetbackend.onrender.com/api/auth/card/${postId}`
+      );
       setPosts(posts.filter((post) => post._id !== postId)); // Update state with filtered posts
     } catch (error) {
       console.error("There was an error deleting the post!", error);
@@ -65,6 +71,11 @@ const Blog = () => {
         <h1>Blog Posts</h1>
         <form onSubmit={handleSubmit}>
           <div>
+            <input
+              type="text"
+              value={img}
+              onChange={(e) => setImg(e.target.value)}
+            />
             <input
               className="input"
               type="text"
@@ -84,6 +95,7 @@ const Blog = () => {
           </div>
           <JoditEditor
             className="jodit"
+            config={{ theme: "dark" }}
             ref={editor}
             value={content}
             onChange={(newContent) => setContent(newContent)}

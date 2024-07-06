@@ -13,6 +13,10 @@ const cardSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  img: {
+    type: String,
+    require: true,
+  },
 });
 
 const Card = new mongoose.model("card", cardSchema);

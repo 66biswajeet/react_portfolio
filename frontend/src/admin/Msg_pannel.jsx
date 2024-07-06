@@ -12,7 +12,7 @@ const Msg_pannel = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/auth/contact"
+          "https://biswajeetbackend.onrender.com/api/auth/contact"
         );
         setMessages(response.data);
       } catch (err) {
@@ -27,7 +27,9 @@ const Msg_pannel = () => {
 
   const handleDelete = async (messageId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/auth/contact/${messageId}`);
+      await axios.delete(
+        `https://biswajeetbackend.onrender.com/api/auth/contact/${messageId}`
+      );
       const updatedMessages = messages.filter(
         (message) => message._id !== messageId
       );

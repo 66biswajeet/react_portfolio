@@ -8,16 +8,21 @@ import DOMPurify from "dompurify";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
 const Blog_page = () => {
   const [posts, setPosts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isloading, setIsloading] = useState(true);
   const { id } = useParams();
   console.log(id);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/auth/card");
+        const response = await axios.get(
+          "https://biswajeetbackend.onrender.com/api/auth/card"
+        );
         setPosts(
           response.data.map((post) => ({
             ...post,
@@ -26,9 +31,8 @@ const Blog_page = () => {
         );
       } catch (error) {
         console.error("There was an error fetching the posts!", error);
-      } finally {
-        setIsLoading(false);
       }
+      setIsloading(false);
     };
 
     fetchPosts();
@@ -38,8 +42,21 @@ const Blog_page = () => {
 
   return (
     <>
-      {isLoading ? (
-        <div>Post is Loading.....</div>
+      {isloading ? (
+        <div className="blog-post-container">
+          <div>
+            <Skeleton style={{ height: "150px", width: "100%" }} />
+          </div>
+          <div className="article_card-content">
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </div>
+          <div className="article_card-content">
+            <Skeleton style={{ width: "100px", height: "30px" }} />
+          </div>
+        </div>
       ) : (
         <div className="blog-post-container">
           {newposts.length > 0 && (
