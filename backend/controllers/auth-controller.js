@@ -29,6 +29,7 @@ const cards = async (req, res) => {
       title: req.body.title,
       text: req.body.text,
       content: req.body.content,
+      img: req.body.img,
     });
     try {
       const savedCard = await card.save();

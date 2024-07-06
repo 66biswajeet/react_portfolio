@@ -51,7 +51,7 @@ const Article_card = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const newPost = { title, text };
+    const newPost = { title, text, img };
 
     try {
       const response = await axios.post(
@@ -62,6 +62,7 @@ const Article_card = () => {
       setTitle("");
       setText("");
       setContent("");
+      setImg("");
     } catch (error) {
       console.error("There was an error creating the post!", error);
     }
