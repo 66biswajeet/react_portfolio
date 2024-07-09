@@ -8,7 +8,7 @@ const controller = require("../controllers/auth-controller");
 const handleErrors = (err, req, res, next) => {
   console.error(err.stack); // Log the error for debugging
   res.status(err.statusCode || 500).json({ message: "An error occurred" });
-  next(); // Pass the error to the next error handler (if any)
+  next();
 };
 
 router.route("/card").post(controller.cards, handleErrors);
