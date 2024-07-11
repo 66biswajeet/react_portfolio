@@ -19,4 +19,6 @@ router.route("/contact").post(controller.contacts, handleErrors);
 router.route("/contact").get(controller.contacts, handleErrors);
 router.route("/contact/:id").delete(controller.contacts, handleErrors);
 
+router.route("/admin").post(controller.admins, handleErrors);
+
 module.exports = router;

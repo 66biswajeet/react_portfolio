@@ -51,6 +51,11 @@ const Navbar = () => {
               Hire Me
             </a>
           </li>
+          <li>
+            <a className="admin" href="/login">
+              Admin
+            </a>
+          </li>
         </ul>
 
         {/* mobile nav icons */}

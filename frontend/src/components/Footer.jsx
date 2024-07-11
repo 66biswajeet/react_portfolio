@@ -71,12 +71,7 @@ const Footer = () => {
           <RiTwitterXFill className="icon" />
         </a>
       </div>
-      <div className="h4">
-        Portfolio Website | © 2024 Biswajeet Jena |
-        <Link className="navbar-link" to="/admin/blog">
-          JEET CODE
-        </Link>
-      </div>
+      <div className="h4">Portfolio Website | © 2024 Biswajeet Jena |</div>
     </div>
   );
 };

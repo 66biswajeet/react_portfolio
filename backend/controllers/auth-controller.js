@@ -1,6 +1,7 @@
 const Blog = require("../models/blog-model");
 const Card = require("../models/card-model");
 const Contact = require("../models/contact-model");
+const Admin = require("../models/admin-model");
 
 // const blog = async (req, res) => {
 //   try {
@@ -107,5 +108,40 @@ const contacts = async (req, res) => {
   }
 };
 
+const admins = async (req, res) => {
+  const ADMIN_KEY = "3pp3sx3ftu";
+
+  if (req.method === "POST") {
+    const { password, name } = req.body;
+
+    if (password !== ADMIN_KEY) {
+      return res.status(401).send("Unauthorized: Incorrect Admin Key");
+    }
+
+    try {
+      // Check if admin already exists
+      let admin = await Admin.findOne({ name: req.body.name });
+
+      if (!admin) {
+        // Create a new admin
+        admin = new Admin({ name: req.body.name });
+        await admin.save();
+        console.log(`New admin created: ${name}`);
+      }
+
+      // Respond with success and redirect URL
+      res
+        .status(200)
+        .json({ message: "Authenticated", redirectUrl: "/admin/blog" });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Internal Server Error");
+    }
+  } else {
+    // Handle unsupported methods
+    res.status(405).json({ message: "Method not allowed" });
+  }
+};
+
 // Export both blog and card functions
-module.exports = { cards, contacts };
+module.exports = { cards, contacts, admins };
