@@ -10,6 +10,7 @@ import Msg_pannel from "./admin/Msg_pannel.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import Sec_blog from "./components/Sec_blog.jsx";
 import Login from "./components/Login.jsx";
+import Notfound from "./components/Notfound.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/login" element={<Login />} />
         {/* <Route path="/blog/:id" element={<Blog_page />} /> */}
         <Route path="/blog/:id" element={<Sec_blog />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

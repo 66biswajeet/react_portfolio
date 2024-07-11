@@ -27,7 +27,7 @@ const Login = () => {
       setName("");
 
       if (response.data.redirectUrl) {
-        navigate(response.data.redirectUrl); // Correct usage of navigate
+        navigate(response.data.redirectUrl);
       }
     } catch (error) {
       setError(error.response ? error.response.data : "An error occurred");
