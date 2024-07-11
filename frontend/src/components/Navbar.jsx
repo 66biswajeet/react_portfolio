@@ -52,9 +52,9 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="admin" href="/login">
+            <Link className="admin" to="/login">
               Admin
-            </a>
+            </Link>
           </li>
         </ul>
 
