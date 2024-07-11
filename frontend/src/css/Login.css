@@ -1,5 +1,6 @@
 .main_box {
   width: 100vw;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +14,7 @@
   position: relative;
 }
 
-.title {
+.titlep {
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;

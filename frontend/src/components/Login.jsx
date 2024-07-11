@@ -37,7 +37,7 @@ const Login = () => {
   return (
     <div className="main_box">
       <div className="form-container">
-        <p className="title">Login As Admin</p>
+        <p className="titlep">Login As Admin</p>
         <form className="form" onSubmit={handleSubmit}>
           <div className="input-group">
             <label htmlFor="username">Username</label>
